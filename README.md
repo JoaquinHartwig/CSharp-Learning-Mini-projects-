@@ -78,7 +78,6 @@ Este repositorio funciona como una bitácora práctica de mi progreso en C#. Aqu
 * Juego de adivinar el número
 * Piedra, papel o tijera
 * Calculadora de hipotenusa
-* Ejercicios de arrays y colecciones
 * Prácticas de Programación Orientada a Objetos
 
 ## Qué aprendí
