@@ -1,34 +1,36 @@
-﻿namespace Metodo_toString
+﻿
+
+
+
+namespace Metodo_ToString
 {
     internal class Program
     {
-        static void Main(string[] args) // Su funcion es convertir un objeto a una cadena de texto legible. Es un método que se encuentra en la clase base Object, y se puede sobrescribir en cualquier clase para proporcionar una representación personalizada del objeto.
+        static void Main(string[] args)//Funcion principal es convertir un objeto en cadena de texto
         {
-          Auto auto1 = new Auto("chevy","corvette",96,"Rojo");
-            Console.WriteLine(auto1);
+            auto miAuto = new auto("Chevy", "k47", "2007", "rojo");
+            Console.WriteLine(miAuto);
         }
     }
-    class Auto
+    class auto
     {
+        public string _Marca;
+        public string _Modelo;
+        public string _Año;
+        public string _Color;
 
-        public string Marca { get; set; }
-        public string Modelo { get; set; }
-        public int Año { get; set; }
-        public string Color { get; set; }
-
-        public Auto (string marca, string modelo, int año, string color)
+        public auto(string Marca, string Modelo, string Año, string Color)
         {
-            Marca = marca;
-            Modelo = modelo;
-            Año = año;
-            Color = color;
-        } 
+            this._Marca= Marca;
+            this._Modelo= Modelo;
+            this._Año= Año;
+            this._Color= Color;
+        }
 
-
-
-
-
-
+        public override string ToString()
+        {
+            return $"Este auto es un {_Marca} {_Modelo} del año {_Año} color {_Color}";//Gracias a este metodo puedo mostrar un obejeto como cadena
+        }
 
     }
 }
