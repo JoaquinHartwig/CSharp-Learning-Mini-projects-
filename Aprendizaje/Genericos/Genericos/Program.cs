@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)//Te permite generar metodos o tipos de datos,sin saber de q van a ser 
         {
             int[] intArray = { 1, 2, 3 };
             double[] doubleArary = { 1, 2, 3 };
