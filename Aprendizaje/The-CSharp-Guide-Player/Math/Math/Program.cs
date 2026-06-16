@@ -13,6 +13,11 @@
             Console.WriteLine(x);
             int partialResult = 2 + 5;//Forzamos q 2 + 5 suceda primero
             int result = partialResult * 2;
+            double side1 = 4.5;
+            double side2 = 3.5 ;
+            double height = 1.5;
+            double areaOfTrapezoid = (side1 + side2) / 2.0 * height; //Como la multiplicacion y division tienen la misma prescendencia el programa lee de derecha a izquierda
+            Console.WriteLine(areaOfTrapezoid);
         }
     }
 }
