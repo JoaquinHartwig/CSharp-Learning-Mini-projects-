@@ -15,6 +15,15 @@ namespace The_Dominion_of_Kings
           + duchies * 3
           + provinces * 6;
             Console.WriteLine("Your total score is " + score);
+
+            int x = 5;
+
+            Console.WriteLine(++x);
+
+            int y = 5;
+
+            Console.WriteLine(y++);
+
         }
     }
 }
