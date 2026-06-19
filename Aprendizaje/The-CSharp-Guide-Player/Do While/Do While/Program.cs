@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            int playersNumber;
+            int playersNumber; // con este bucle no hace falta inicializar en -1 playerNumber
             do
             {
                 Console.Write("Enter a number between 0 and 10: ");
