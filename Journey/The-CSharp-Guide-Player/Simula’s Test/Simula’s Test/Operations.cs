@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Simula_s_Test
 {
-    internal class Operations
+    enum ChestState
     {
+        Open,
+        Closed,
+        Locked
     }
 }
