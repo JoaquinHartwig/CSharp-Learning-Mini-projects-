@@ -38,9 +38,7 @@
                 case 3:
                     selectedFood = food.Gumbo;
                     break;
-                default:
-                    selectedFood = food.Soup;
-                    break;
+                
 
 
 
@@ -78,10 +76,7 @@
                 case 4:
                     selectedingridients = ingredients.Potatoes;
                     break;
-                default:
-                    selectedingridients = ingredients.Potatoes;
-                    break;
-
+                
 
 
 
@@ -111,9 +106,7 @@
                 case 3:
                     selectedcondiments = Condiments.sweet;
                     break;
-                default:
-                    selectedcondiments = Condiments.salty;
-                    break;
+               
 
 
 
