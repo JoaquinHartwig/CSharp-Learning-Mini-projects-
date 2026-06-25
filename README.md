@@ -1,4 +1,4 @@
-# 💻 C# Learning Journey
+# C# Learning Journey
 
 > *Documenting the climb, one project at a time.*
 
@@ -8,7 +8,7 @@ Started: **June 2026**
 
 ---
 
-## 🎯 Purpose
+##  Purpose
 
 The goal of this repository is to track my progress as I learn C# while building a strong foundation in software development.
 
@@ -18,7 +18,7 @@ This repository serves as both a learning log and a portfolio of my progression 
 
 ---
 
-## 🚀 Projects
+##  Projects
 
 Larger applications developed to apply multiple concepts and gain experience building complete solutions.
 
@@ -27,7 +27,7 @@ Larger applications developed to apply multiple concepts and gain experience bui
 
 ---
 
-## 🧪 Mini Projects & Practice
+##  Mini Projects & Practice
 
 A collection of exercises, experiments, and small projects created while learning new concepts and reinforcing programming fundamentals.
 
@@ -36,7 +36,7 @@ A collection of exercises, experiments, and small projects created while learnin
 
 ---
 
-## 🛠️ Technologies & Tools
+##  Technologies & Tools
 
 * C#
 * .NET
@@ -47,7 +47,7 @@ A collection of exercises, experiments, and small projects created while learnin
 
 ---
 
-# 📚 Topics Covered
+#  Topics Covered
 
 ## Fundamentals
 
@@ -109,7 +109,7 @@ A collection of exercises, experiments, and small projects created while learnin
 
 ---
 
-## 📖 Learning Philosophy
+##  Learning Philosophy
 
 I believe programming is learned by building.
 
@@ -121,7 +121,7 @@ Each folder represents concepts studied, challenges overcome, and practical expe
 
 ---
 
-## 🎯 Next Goals
+##  Next Goals
 
 * Deepen my understanding of Object-Oriented Programming
 * Build larger desktop applications with .NET
@@ -132,7 +132,7 @@ Each folder represents concepts studied, challenges overcome, and practical expe
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Joaquin Hartwig**
 
