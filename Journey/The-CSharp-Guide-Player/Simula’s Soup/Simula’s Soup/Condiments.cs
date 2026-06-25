@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Simula_s_Soup
 {
-    internal class Condiments
+    enum  Condiments
     {
+        spicy,
+        salty,
+        sweet
     }
 }

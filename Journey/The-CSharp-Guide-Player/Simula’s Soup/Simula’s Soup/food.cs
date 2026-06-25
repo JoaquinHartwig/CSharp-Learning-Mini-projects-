@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Simula_s_Soup
 {
-    internal class food
+    enum food
     {
+        Soup,
+        Stew,
+        Gumbo
     }
 }

@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Simula_s_Soup
 {
-    internal class ingredients
+    enum ingredients
     {
+        Mushrooms,
+        Chicken,
+        Carrots,
+        Potatoes
     }
 }
