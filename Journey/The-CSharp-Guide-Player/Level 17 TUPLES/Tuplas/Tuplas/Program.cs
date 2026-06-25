@@ -30,6 +30,10 @@ Clase o struct = entidad del dominio de tu programa.*/
                 Console.WriteLine(
                 $"Name:{score.Name} Level:{score.Level} Score:{score.Points}");
             }
+            (int, int) a = (1, 2);
+            (int, int) b = (1, 2);
+            Console.WriteLine(a == b);
+            Console.WriteLine(a != b);
         }
     }
 }
