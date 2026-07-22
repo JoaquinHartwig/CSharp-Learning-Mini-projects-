@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Vin_Fletcher_s_Arrows
 {
-    enum Arrowhead
+    enum Arrowhead //Una variable de tipo Arrowhead solo puede tener uno de esos tres valores.
     {
   
   
