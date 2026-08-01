@@ -34,7 +34,7 @@
             }
            public float Length
             {
-                get { return _length; }
+                get => _length;
             }
             public Arrowhead ArrowheadType
             {
