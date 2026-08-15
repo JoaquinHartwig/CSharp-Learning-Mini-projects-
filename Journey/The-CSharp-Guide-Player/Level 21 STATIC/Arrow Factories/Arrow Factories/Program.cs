@@ -4,59 +4,154 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("What type of arrow do you want?");
+            Console.WriteLine("1. Elite");
+            Console.WriteLine("2. Beginner");
+            Console.WriteLine("3. Marksman");
+            Console.WriteLine("4. Custom");
+
+            int arrowChoice = Convert.ToInt32(Console.ReadLine());
+
+            switch (arrowChoice)
+            {
+                case 1:
+                    Arrow eliteArrow = Arrow.CreateEliteArrow();
+                    Console.WriteLine($"Elite Arrow created. Cost: {eliteArrow.GetCost()}");
+                    break;
+
+                case 2:
+                    Arrow beginnerArrow = Arrow.CreateBeginnerArrow();
+                    Console.WriteLine($"Beginner Arrow created. Cost: {beginnerArrow.GetCost()}");
+                    break;
+
+                case 3:
+                    Arrow marksmanArrow = Arrow.CreateMarksmanArrow();
+                    Console.WriteLine($"Marksman Arrow created. Cost: {marksmanArrow.GetCost()}");
+                    break;
+
+                case 4:
+                    // Arrowhead
+                    Console.WriteLine("Choose an arrowhead:");
+                    Console.WriteLine("1. Steel");
+                    Console.WriteLine("2. Wood");
+                    Console.WriteLine("3. Obsidian");
+
+                    int arrowheadChoice = Convert.ToInt32(Console.ReadLine());
+
+                    Arrowhead arrowhead;
+
+                    switch (arrowheadChoice)
+                    {
+                        case 1:
+                            arrowhead = Arrowhead.Steel;
+                            break;
+
+                        case 2:
+                            arrowhead = Arrowhead.Wood;
+                            break;
+
+                        case 3:
+                            arrowhead = Arrowhead.Obsidian;
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid arrowhead.");
+                            return;
+                    }
+
+                    // Fletching
+                    Console.WriteLine("Choose a fletching:");
+                    Console.WriteLine("1. Plastic");
+                    Console.WriteLine("2. Turkey Feathers");
+                    Console.WriteLine("3. Goose Feathers");
+
+                    int fletchingChoice = Convert.ToInt32(Console.ReadLine());
+
+                    Fletching fletching;
+
+                    switch (fletchingChoice)
+                    {
+                        case 1:
+                            fletching = Fletching.Plastic;
+                            break;
+
+                        case 2:
+                            fletching = Fletching.TurkeyFeathers;
+                            break;
+
+                        case 3:
+                            fletching = Fletching.GooseFeathers;
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid fletching.");
+                            return;
+                    }
+
+                    // Length
+                    Console.WriteLine("Enter the arrow length:");
+                    float length = Convert.ToSingle(Console.ReadLine());
+
+                    // Create custom arrow
+                    Arrow customArrow = new Arrow(arrowhead, fletching, length);
+
+                    Console.WriteLine($"Custom Arrow created. Cost: {customArrow.GetCost()}");
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid selection.");
+                    break;
+            }
         }
-        /*Modify your Arrow class one final time to include static methods of the form public static
-Arrow CreateEliteArrow() { ... } for each of the three above arrow types.
-• Modify the program to allow users to choose one of these pre-defined types or a custom arrow. If
-they select one of the predefined styles, produce an Arrow instance using one of the new static
-methods. If they choose to make a custom arrow, use your earlier code to get their custom data
-about the desired arrow*/
-        enum Arrowhead //Una variable de tipo Arrowhead solo puede tener uno de esos tres valores.
+
+        enum Arrowhead
         {
-
-
             Steel,
             Wood,
             Obsidian
         }
+
         enum Fletching
         {
             Plastic,
             TurkeyFeathers,
             GooseFeathers
         }
+
         class Arrow
         {
             private Arrowhead _arrowhead;
             private Fletching _fletching;
             private float _length;
 
-            public Arrow(Arrowhead arrowhead, Fletching fletching, float length) //Constructor for the Arrow class
+            public Arrow(Arrowhead arrowhead, Fletching fletching, float length)
             {
                 _arrowhead = arrowhead;
                 _fletching = fletching;
                 _length = length;
             }
+
             public float GetLength()
             {
                 return _length;
             }
+
             public Arrowhead GetArrowhead()
             {
                 return _arrowhead;
             }
+
             public Fletching GetFletching()
             {
                 return _fletching;
             }
+
             public float GetCost()
             {
                 float arrowheadCost = 0;
                 float fletchingCost = 0;
-                float shaftCost = 0;
 
-                if (_arrowhead == Arrowhead.Steel) // Check the type of arrowhead and assign the corresponding cost
+                if (_arrowhead == Arrowhead.Steel)
                 {
                     arrowheadCost = 10;
                 }
@@ -69,7 +164,7 @@ about the desired arrow*/
                     arrowheadCost = 5;
                 }
 
-                if (_fletching == Fletching.Plastic)// Check the type of fletching and assign the corresponding cost
+                if (_fletching == Fletching.Plastic)
                 {
                     fletchingCost = 10;
                 }
@@ -82,9 +177,39 @@ about the desired arrow*/
                     fletchingCost = 3;
                 }
 
-                shaftCost = _length * 0.05f;// Calculate the cost of the shaft based on its length
+                float shaftCost = _length * 0.05f;
 
-                return arrowheadCost + fletchingCost + shaftCost;// Return the total cost of the arrow
+                return arrowheadCost + fletchingCost + shaftCost;
+            }
+
+            // Factory Method
+            public static Arrow CreateEliteArrow()
+            {
+                return new Arrow(
+                    Arrowhead.Steel,
+                    Fletching.Plastic,
+                    95
+                );
+            }
+
+            // Factory Method
+            public static Arrow CreateBeginnerArrow()
+            {
+                return new Arrow(
+                    Arrowhead.Wood,
+                    Fletching.GooseFeathers,
+                    75
+                );
+            }
+
+            // Factory Method
+            public static Arrow CreateMarksmanArrow()
+            {
+                return new Arrow(
+                    Arrowhead.Steel,
+                    Fletching.GooseFeathers,
+                    65
+                );
             }
         }
     }
